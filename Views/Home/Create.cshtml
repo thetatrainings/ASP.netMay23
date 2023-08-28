@@ -48,9 +48,17 @@
     <script>
         $("#StudentName").val(localStorage.getItem("Name"));
 
+        //without array
         $("#StudentName").blur(function () {
 
             localStorage.setItem("Name", $("#StudentName").val());
+
+        });
+        
+        //with array
+        $("#StudentName").blur(function () {
+            var hh = [{ "Name": $("#StudentName").val() }, { "gdgd": $("#StudentName").val() }]
+            localStorage.setItem("form Data", hh);
 
         });
     </script>

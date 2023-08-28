@@ -11,9 +11,7 @@ namespace ASP.netMay23.Models
         public int Id { get; set; }
         [Required]
         public string? Name { get; set; }
-        [Required]
-        [MaxLength(100)]
-        [DisplayName("Roll")]
+        [DisplayName("Roll Number")]
         public string? RollNumber { get; set; }
         [MaxLength(10)]
         public string? Class { get; set; }

@@ -10,8 +10,11 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<maydbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+//Cookies Servies
 builder.Services.AddSingleton<IHttpContextAccessor, IHttpContextAccessor>();
 builder.Services.AddHttpContextAccessor();
+
+
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<maydbContext>();
 builder.Services.AddControllersWithViews();
